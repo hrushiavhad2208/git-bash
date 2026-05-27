@@ -1,21 +1,26 @@
 pipeline {
     agent any
+
     stages {
         stage('PULL STAGE') {
             steps {
+                git 'https://github.com/hrushiavhad2208/git-bash.git'
                 echo "PULL SUCCESS"
             }
         }
+
         stage('BUILD STAGE') {
             steps {
                 echo "BUILD SUCCESS"
             }
         }
+
         stage('TEST STAGE') {
             steps {
                 echo "TEST SUCCESS"
             }
         }
+
         stage('DEPLOY STAGE') {
             steps {
                 echo "DEPLOY SUCCESS"
